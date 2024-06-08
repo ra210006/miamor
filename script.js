@@ -3,8 +3,10 @@ function checkPassword() {
     const password = document.getElementById('password').value;
     const images = {
         'besitos en el cuello': 'image1',
+        'BESITOS EN EL CUELLO': 'image1',
         'besos': 'image2',
         'dondesea': 'image3',
+        'DONDESEA': 'image3',
         'bañarnos': 'image4',
         // Añade más contraseñas e IDs de imágenes según sea necesario
     };
