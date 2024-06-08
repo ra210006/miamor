@@ -4,7 +4,8 @@ function checkPassword() {
     const images = {
         'besitos en el cuello': 'image1',
         'besos': 'image2',
-        'beso donde quieras': 'image3',
+        'beso sopresa': 'image3',
+        'abrazos': 'image4',
         // Añade más contraseñas e IDs de imágenes según sea necesario
     };
 
