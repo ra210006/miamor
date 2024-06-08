@@ -13,6 +13,6 @@ function checkPassword() {
         document.querySelectorAll('#images img').forEach(img => img.style.display = 'none');
         document.getElementById(images[password]).style.display = 'block';
     } else {
-        alert('Contraseña incorrecta, vuelve a intentarlo mi niña');
+        alert('Contraseña incorrecta, vuelve a intentarlo mi niña, ahora me debes 837987894728930 besitos mas');
     }
 }
