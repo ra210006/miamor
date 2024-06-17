@@ -1,44 +1,37 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Regalo Especial</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #f0f0f0;
+function checkPassword() {
+    const password = document.getElementById('password').value;
+    const media = {
+        'besitos en el cuello': { type: 'image', id: 'image1' },
+        'BESITOS EN EL CUELLO': { type: 'image', id: 'image1' },
+        'besos': { type: 'image', id: 'image2' },
+        'dondesea': { type: 'image', id: 'image3' },
+        'DONDESEA': { type: 'image', id: 'image3' },
+        'bañarnos': { type: 'image', id: 'image4' },
+        'documento1': { type: 'pdf', id: 'pdf1' },
+        'documento2': { type: 'pdf', id: 'pdf2' },
+        // Añade más contraseñas e IDs de imágenes/PDFs según sea necesario
+    };
+
+    const mediaContainer = document.getElementById('media');
+    const imageElements = document.querySelectorAll('#media img');
+    const pdfElements = document.querySelectorAll('#media iframe');
+
+    if (media[password]) {
+        const item = media[password];
+
+        // Oculta todas las imágenes y PDFs
+        imageElements.forEach(img => img.style.display = 'none');
+        pdfElements.forEach(pdf => pdf.style.display = 'none');
+
+        // Muestra el elemento correspondiente
+        if (item.type === 'image') {
+            document.getElementById(item.id).style.display = 'block';
+        } else if (item.type === 'pdf') {
+            document.getElementById(item.id).style.display = 'block';
         }
-        #media img, #media iframe {
-            display: none;
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
-        }
-        iframe {
-            width: 80%;
-            height: 500px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Introduce la contraseña</h1>
-    <input type="password" id="password" placeholder="Contraseña">
-    <button onclick="checkPassword()">Ingresar</button>
-    <div id="media">
-        <img id="image1" src="imagen1.jpg" alt="Imagen 1">
-        <img id="image2" src="imagen2.jpg" alt="Imagen 2">
-        <img id="image3" src="imagen3.jpg" alt="Imagen 3">
-        <img id="image4" src="imagen4.jpg" alt="Imagen 4">
-        <iframe id="pdf1" src="Bajo la lluvia.pdf"></iframe>
-        <iframe id="pdf2" src="documento2.pdf"></iframe>
-        <!-- Añade más imágenes y PDFs según sea necesario -->
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
+        
+        mediaContainer.style.display = 'block';
+    } else {
+        alert('Contraseña incorrecta, vuelve a intentarlo mi niña, ahora me debes 837987894728930 besitos más');
+    }
+}
