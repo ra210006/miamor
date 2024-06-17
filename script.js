@@ -7,7 +7,7 @@ function checkPassword() {
         'dondesea': { type: 'image', id: 'image3' },
         'DONDESEA': { type: 'image', id: 'image3' },
         'bañarnos': { type: 'image', id: 'image4' },
-        'documento1': { type: 'pdf', id: 'pdf1' },
+        'bajo la lluvia': { type: 'pdf', id: 'pdf1' },
         'documento2': { type: 'pdf', id: 'pdf2' },
         // Añade más contraseñas e IDs de imágenes/PDFs según sea necesario
     };
